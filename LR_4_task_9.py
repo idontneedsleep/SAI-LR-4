@@ -13,7 +13,7 @@ def build_arg_parser():
     return parser
 
 
-# Обчислення оцінки евклідова відстані між користувачами userl та user2
+# Обчислення оцінки евклідова відстані між користувачами user1 та user2
 def euclidean_score(dataset, user1, user2):
     if user1 not in dataset:
         raise TypeError('Cannot find ' + user1 + ' in the dataset')
@@ -21,7 +21,7 @@ def euclidean_score(dataset, user1, user2):
     if user2 not in dataset:
         raise TypeError('Cannot find ' + user2 + ' in the dataset')
 
-    # Фільми, оцінені обома користувачами, userl та user2
+    # Фільми, оцінені обома користувачами, user1 та user2
     common_movies = {}
 
     for item in dataset[user1]:
@@ -49,7 +49,7 @@ def pearson_score(dataset, user1, user2):
     if user2 not in dataset:
         raise TypeError('Cannot find ' + user2 + ' in the dataset')
 
-    # Фільми, оцінені обома користувачами, userl та user2
+    # Фільми, оцінені обома користувачами, user1 та user2
     common_movies = {}
 
     for item in dataset[user1]:
